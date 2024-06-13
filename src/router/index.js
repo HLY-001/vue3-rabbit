@@ -12,7 +12,7 @@ const router = createRouter({
       component:layout,
       children:[
         {path:'',component:home},
-        {path:'/category',component:category}
+        {path:'/category/:id',component:category}
       ]
     },
     {path:'/login',component:login}

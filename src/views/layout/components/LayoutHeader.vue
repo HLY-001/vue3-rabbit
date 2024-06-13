@@ -1,7 +1,7 @@
 <script setup>
 import {useCategoryStore} from '@/stores/category'
 
-const getCategory =useCategoryStore()
+const CategoryStore =useCategoryStore()
 </script>
 
 <template>
@@ -11,8 +11,8 @@ const getCategory =useCategoryStore()
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
-        <li v-for="item in getCategory.categoryList" :key="item.id" class="home">
-          <RouterLink to="/">{{item.name}}</RouterLink>
+        <li v-for="item in CategoryStore.categoryList" :key="item.id" class="home">
+          <RouterLink active-class="active" :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         </li>
       </ul>
       <div class="search">
