@@ -16,6 +16,8 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
+      deep: true, // 搜索子目录
+      dirs: ['src/components'], // 按需加载的文件夹
       resolvers: [ElementPlusResolver({importStyle:"sass"})],
     }),
   ],

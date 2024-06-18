@@ -5,5 +5,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  //当保存的时候,eslint自动帮我们修复错误"
+  "editor.codeActionsonSave": {
+    "source.fixAll": "explicit"
+  },
+  //保存代码，不自动格式化
+  "editor.formatOnSave" : false, 
+  
 }
